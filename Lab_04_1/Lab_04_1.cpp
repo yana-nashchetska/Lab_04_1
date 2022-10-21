@@ -1,6 +1,8 @@
 #include <iostream>
 #include <cmath>
+
 using namespace std;
+
 int main()
 {
 	int N, j;
@@ -14,6 +16,7 @@ int main()
 		j++;
 	}
 	cout << S << endl;
+
 	S = 0;
 	j = 2;
 	do {
@@ -21,17 +24,20 @@ int main()
 		j++;
 	} while (j <= N);
 	cout << S << endl;
+
 	S = 0;
 	for (j = 2; j <= N; j++)
 	{
 		S += (j * (N - j)) / (j * j + (N - j) * (N - j));
 	}
 	cout << S << endl;
+
 	S = 0;
 	for (j = N; j >= 2; j--)
 	{
 		S += (j * (N - j)) / (j * j + (N - j) * (N - j));
 	}
 	cout << S << endl;
+
 	return 0;
 }
